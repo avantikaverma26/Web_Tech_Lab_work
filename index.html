@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--The following source was used for creating the code for the modal: 
+      1. https://www.w3schools.com/howto/howto_css_modals.asp -->
     <title>
         Photo Album of Authors
     </title>
@@ -12,30 +14,52 @@
     <h1>
         Photo Album
     </h1>
-    <nav>
-        <a href="#Swami">
-            <pre>Swami Vivekananda</pre>
-        </a>
-        <a href="#Colleen">
-            <pre>Colleen Hoover</pre>
-        </a>
-        <a href="#Anna">
-            <pre>Anna Todd</pre>
-        </a>
-    </nav>
-    <div>
-        <form action="https://wt.ops.labs.vu.nl/api23/954333d6" method="post" class="forminit" target="_blank">
-            <table>
+    <!-- Trigger/Open The Modal -->
+<button id="myForms">Form</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+      <span class="close">&times;</span>
+      <!--form is a part of modal-->
+        <form id= "formSubmit" >
+            <div id = "btnAtBottom">
+                <input type="url" id="image" name="image" placeholder="Enter Url">
+                <input type="text" id="author" name="author" placeholder="Enter Author Name">
+                <input type="text" id="alt" name="alt" placeholder="Enter Alt">
+                <input type ="text" id="tags" name="tags" placeholder="Enter Tags">
+                <input type="text" id="description" name="description" placeholder="Enter Description!">
+                <!-- WCAG 2.1 Guideline: All the information throughout the web page is accesible without the need of the keyboard, except the form. -->
+                <button id ="Submit" class="btn">Submit </button> 
+                <button id ="Reset"  class="btn">Reset </button> 
+                <button id ="Update" class="btn">Update </button> 
+            </div>
+            <!-- WCAG 1.1 Guideline: The form accepts user input and the name describes its purpose.-->
+      </form>
+      </div>
+    </div>
+    <!--Search field for author name-->
+    <div class="input-group">
+		  <input type="text" id="formSearch" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon"/>
+		  <button id ="searchBtn" type="button" class="btn btn-outline-primary">Search</button>
+    </div>
+    <!-- WCAG 2.4 Guideline: The web page provides a way to navigate for the users by using a search bar for the authors name.-->
+            <table id="tblPhoto" >
                 <caption>
                     Famous Authors
                 </caption>
                 <thead>
                     <tr>
                         <th>
-                        Photo
+                            Photo
                         </th>
                         <th>
                             Author Name
+                        </th>
+                        <th>
+                            Alt
                         </th>
                         <th>
                             Tags
@@ -43,152 +67,15 @@
                         <th>
                             Description
                         </th>
-                        <th>
-                            Alt
-                        </th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr id="Swami">
-                        <td data-label="Photo">
-                            <figure>
-                                <img src="https://www.culturalindia.net/iliimages/Swami-Vivekananda-ili-96-img-1.jpg" alt="Image of Swami Vivenkananda" height="200" width="300">
-                                <figcaption>
-                                    Author 1
-                                </figcaption>
-                            </figure>
-                        </td>
-                        <td data-label="Author">
-                            Swami Vivekananda
-                        </td>
-                        <td data-label="Tags">
-                            <ul>
-                                <li>Author</li>
-                                <li>Philosopher</li>
-                                <li>Indian Hindu Monk</li>
-                            </ul>
-                        </td>
-                        <td class="box" data-label="Description">
-                            <section>
-                                Swami Vivekananda was one of the most popular Hindu monks and spiritual leaders of India. He was a perfect blend of classic Indian text and modern western thoughts. He died at the age of 39 in Bengal <abbr title= "Rest In Peace">(RIP)</abbr>. His most known books are:
-                            <ol>
-                                <li>Complete Works of Swami Vivekananda</li>
-                                <li>Raja-Yoga</li>
-                                <li>Karma Yoga: The Yoga of Action</li>
-                            </ol> 
-                            </section>
-                        </td>
-                        <td data-label="Alt">
-                            Image of Swami Vivekananda
-                        </td>
-                    </tr>
-
-                    <tr id="Colleen">
-                        <td data-label="Photo">
-                            <figure>
-                                <img src="https://s26162.pcdn.co/wp-content/uploads/2022/10/colleen-hoover.jpeg" alt="Image of Colleen Hoover" height="200" width="300">
-                                <figcaption>
-                                        Author 2
-                                </figcaption>
-                            </figure>
-                        </td>
-                        <td data-label="Author">
-                            Colleen Hoover
-                        </td>
-                        <td data-label="Tags">
-                            <ul>
-                                <li>
-                                    Author
-                                </li>
-                                <li>
-                                    Woman
-                                </li>
-                                <li>
-                                    Bookworm
-                                </li>
-                            </ul>
-                        </td>
-                        <td class="box" data-label="Description">
-                            Colleen Hoover is the #1 New York Times bestselling author of more than twenty-three novels. Many of Hoover's plot lines involve emotionally intense situations including sexual assault, surviving trauma, infertility and abusive relationships. She is an young adult fiction and romance author.
-                        </td>
-                        <td data-label="Alt">
-                            Image of Colleen Hoover
-                        </td>
-                    </tr>
-
-                    <tr id="Anna">
-                        <td data-label="Photo">
-                            <figure>
-                                <img src="https://images.gr-assets.com/authors/1550778141p8/3927354.jpg" alt="Image of Anna Todd" height="200" width="300">
-                                <figcaption> 
-                                    Author 3
-                                </figcaption>
-                            </figure>
-                        </td>  
-
-                        <td data-label="Author">
-                            Anna Todd
-                        </td>
-                        <td data-label="Tags">
-                            <ul>
-                                <li>
-                                    Author
-                                </li>
-                                <li>
-                                    Director
-                                </li>
-                                <li>
-                                    Wattpad
-                                </li>
-                            </ul>
-                        </td>
-                        <td class="box" data-label="Description">
-                            Anna Todd is an American author and screenwriter, who is best known for her <strong><em>After</em></strong> series. She started publishing on the social storytelling platform Wattpad.
-                        </td>
-                        <td data-label="Alt">
-                            Image of Anna Todd
-                        </td>
-                    </tr>
-
-                    <tr class="four">
-                        <td data-label="Photo">
-                            <label for="image">
-                                Photo
-                            </label><br>
-                            <input type="url" id="image" name="image" placeholder="Enter Url">
-                        </td>
-                        <td data-label="Author">
-                            <label for="author">
-                                Author
-                            </label><br>
-                            <input type="text" id="author" name="author" placeholder="Enter Author Name">
-                        </td>
-                        <td data-label="Tags">
-                            <label for="tags">
-                                Tags
-                            </label><br>
-                            <input type ="text" id="tags" name="tags" placeholder="Enter Tags">
-                        </td>
-                        <td class="box" data-label="Description"> 
-                            <label for="description">
-                                Description
-                            </label><br>
-                            <input type="text" id="description" name="description" placeholder="Enter Description!">
-                        </td>
-                        <td data-label="Alt"> 
-                            <label for="alt">
-                                Alt
-                            </label><br>
-                            <input type="text" id="alt" name="alt" placeholder="Enter Alt">
-                            <input type="submit" value="Submit">
-                        </td>
-                    </tr>
+                <tbody id="data-output">
+                     <!-- Populate data from JS file -->
                 </tbody>
             </table>
-        </form>
-    </div>
+    <!-- WCAG 1.3 Guideline: We used the table, th, td, tr elemnts correctly. -->
+    
     <div>
-        
         <dl>
             <dt>
                 <p class="sbcr">
@@ -200,5 +87,14 @@
             </dd> 
         </dl>
     </div> 
+<script src= "Script.js"></script>
+<script>
+	getDataFromServer();
+    registerBtnEvents();
+</script>
+
+
 </body>
 </html>
+<!-- WCAG 1.4 Guideline: Throughout the photo gallery, we have used an aesthetic color palette that suits one another. 
+-->
