@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        Photo Album of Authors
+    </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>
+        Photo Album
+    </h1>
+    <nav>
+        <a href="#Swami">
+            <pre>Swami Vivekananda</pre>
+        </a>
+        <a href="#Colleen">
+            <pre>Colleen Hoover</pre>
+        </a>
+        <a href="#Anna">
+            <pre>Anna Todd</pre>
+        </a>
+    </nav>
+    <div>
+        <form action="https://wt.ops.labs.vu.nl/api23/954333d6" method="post" class="forminit" target="_blank">
+            <table>
+                <caption>
+                    Famous Authors
+                </caption>
+                <thead>
+                    <tr>
+                        <th>
+                        Photo
+                        </th>
+                        <th>
+                            Author Name
+                        </th>
+                        <th>
+                            Tags
+                        </th>
+                        <th>
+                            Description
+                        </th>
+                        <th>
+                            Alt
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="Swami">
+                        <td data-label="Photo">
+                            <figure>
+                                <img src="https://www.culturalindia.net/iliimages/Swami-Vivekananda-ili-96-img-1.jpg" alt="Image of Swami Vivenkananda" height="200" width="300">
+                                <figcaption>
+                                    Author 1
+                                </figcaption>
+                            </figure>
+                        </td>
+                        <td data-label="Author">
+                            Swami Vivekananda
+                        </td>
+                        <td data-label="Tags">
+                            <ul>
+                                <li>Author</li>
+                                <li>Philosopher</li>
+                                <li>Indian Hindu Monk</li>
+                            </ul>
+                        </td>
+                        <td class="box" data-label="Description">
+                            <section>
+                                Swami Vivekananda was one of the most popular Hindu monks and spiritual leaders of India. He was a perfect blend of classic Indian text and modern western thoughts. He died at the age of 39 in Bengal <abbr title= "Rest In Peace">(RIP)</abbr>. His most known books are:
+                            <ol>
+                                <li>Complete Works of Swami Vivekananda</li>
+                                <li>Raja-Yoga</li>
+                                <li>Karma Yoga: The Yoga of Action</li>
+                            </ol> 
+                            </section>
+                        </td>
+                        <td data-label="Alt">
+                            Image of Swami Vivekananda
+                        </td>
+                    </tr>
+
+                    <tr id="Colleen">
+                        <td data-label="Photo">
+                            <figure>
+                                <img src="https://s26162.pcdn.co/wp-content/uploads/2022/10/colleen-hoover.jpeg" alt="Image of Colleen Hoover" height="200" width="300">
+                                <figcaption>
+                                        Author 2
+                                </figcaption>
+                            </figure>
+                        </td>
+                        <td data-label="Author">
+                            Colleen Hoover
+                        </td>
+                        <td data-label="Tags">
+                            <ul>
+                                <li>
+                                    Author
+                                </li>
+                                <li>
+                                    Woman
+                                </li>
+                                <li>
+                                    Bookworm
+                                </li>
+                            </ul>
+                        </td>
+                        <td class="box" data-label="Description">
+                            Colleen Hoover is the #1 New York Times bestselling author of more than twenty-three novels. Many of Hoover's plot lines involve emotionally intense situations including sexual assault, surviving trauma, infertility and abusive relationships. She is an young adult fiction and romance author.
+                        </td>
+                        <td data-label="Alt">
+                            Image of Colleen Hoover
+                        </td>
+                    </tr>
+
+                    <tr id="Anna">
+                        <td data-label="Photo">
+                            <figure>
+                                <img src="https://images.gr-assets.com/authors/1550778141p8/3927354.jpg" alt="Image of Anna Todd" height="200" width="300">
+                                <figcaption> 
+                                    Author 3
+                                </figcaption>
+                            </figure>
+                        </td>  
+
+                        <td data-label="Author">
+                            Anna Todd
+                        </td>
+                        <td data-label="Tags">
+                            <ul>
+                                <li>
+                                    Author
+                                </li>
+                                <li>
+                                    Director
+                                </li>
+                                <li>
+                                    Wattpad
+                                </li>
+                            </ul>
+                        </td>
+                        <td class="box" data-label="Description">
+                            Anna Todd is an American author and screenwriter, who is best known for her <strong><em>After</em></strong> series. She started publishing on the social storytelling platform Wattpad.
+                        </td>
+                        <td data-label="Alt">
+                            Image of Anna Todd
+                        </td>
+                    </tr>
+
+                    <tr class="four">
+                        <td data-label="Photo">
+                            <label for="image">
+                                Photo
+                            </label><br>
+                            <input type="url" id="image" name="image" placeholder="Enter Url">
+                        </td>
+                        <td data-label="Author">
+                            <label for="author">
+                                Author
+                            </label><br>
+                            <input type="text" id="author" name="author" placeholder="Enter Author Name">
+                        </td>
+                        <td data-label="Tags">
+                            <label for="tags">
+                                Tags
+                            </label><br>
+                            <input type ="text" id="tags" name="tags" placeholder="Enter Tags">
+                        </td>
+                        <td class="box" data-label="Description"> 
+                            <label for="description">
+                                Description
+                            </label><br>
+                            <input type="text" id="description" name="description" placeholder="Enter Description!">
+                        </td>
+                        <td data-label="Alt"> 
+                            <label for="alt">
+                                Alt
+                            </label><br>
+                            <input type="text" id="alt" name="alt" placeholder="Enter Alt">
+                            <input type="submit" value="Submit">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+    <div>
+        
+        <dl>
+            <dt>
+                <p class="sbcr">
+                    <!-- Short Browser Compatibility Report -->
+                </p>
+            </dt>
+            <dd> 
+                 <!-- The default browser of our Photo Album is opened on Google Chrome. The difference between Chrome and Safari is that the after bold is stronger in Safari than Chrome and the links on the top in Chrome and Safari have different fonts. The font of the whole Photo Album in Chrome and Firefox are different, even though it has been set as the same font style. -->  
+            </dd> 
+        </dl>
+    </div> 
+</body>
+</html>
